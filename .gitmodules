@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/vim-emblem"]
 	path = .vim/bundle/vim-emblem
 	url = https://github.com/heartsentwined/vim-emblem.git
+[submodule ".rbenv"]
+	path = .rbenv
+	url = https://github.com/rbenv/rbenv.git

@@ -17,4 +17,4 @@ export PS1='\[$(tput setaf 2)\]\u@\h \[$(tput setaf 4)\]\W \[$(tput setaf 1)\]$ 
 alias ls="ls --color"
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
-# TODO eval "$(rbenv init -)"
+eval "$(rbenv init -)"
