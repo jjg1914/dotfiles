@@ -11,6 +11,6 @@ if which tmux > /dev/null 2>&1
 then
   if [[ -z "$TMUX" ]] && [[ $TERM == "xterm" ]]
   then
-    exec tmux attach || exec tmux
+    exec bash -c "tmux attach || tmux"
   fi
 fi
