@@ -61,3 +61,6 @@
 [submodule ".local/share/rbenv/plugins/ruby-build"]
 	path = .local/share/rbenv/plugins/ruby-build
 	url = https://github.com/rbenv/ruby-build.git
+[submodule ".nvm"]
+	path = .nvm
+	url = https://github.com/creationix/nvm.git
