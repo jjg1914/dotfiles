@@ -1,2 +1,2 @@
-*.sw[opn]
+**/.*.sw[opn]
 node_modules/
