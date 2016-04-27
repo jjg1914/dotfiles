@@ -64,3 +64,9 @@
 [submodule ".nvm"]
 	path = .nvm
 	url = https://github.com/creationix/nvm.git
+[submodule ".vim/bundle/vimproc.vim"]
+	path = .vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule ".vim/bundle/tsuguyomi"]
+	path = .vim/bundle/tsuguyomi
+	url = https://github.com/Quramy/tsuquyomi.git

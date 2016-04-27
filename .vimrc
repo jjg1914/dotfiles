@@ -36,6 +36,7 @@ map <Leader>ee :ll<CR>
 " syntastic-sass
 let g:syntastic_sass_load_paths = [ "public/bower_components/bootstrap-sass/lib" ]
 let g:syntastic_cpp_compiler_options = "-std=c++11"
+let g:syntastic_typescript_checkers = [ "tsuquyomi" ]
 
 " syntastic-javascript
 let g:syntastic_javascript_checkers = [ 'jscs', 'jshint' ]
@@ -51,3 +52,6 @@ let g:coverage_json_path = getcwd() . '/coverage/istanbul/coverage-final.json'
 
 " vim-slime
 let g:slime_target = "tmux"
+
+" tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
