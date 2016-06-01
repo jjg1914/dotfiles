@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+
+require "json"
+
+def options_for(defaults,list)
+  case list.first
+  when "-i"
+    options_for defaults.dup.merge(:case_insensitive => true), list.drop(1)
+  when "-n"
+    options_for defaults.dup.merge(:no_eval => true), list.drop(1)
+  else
+    defaults.dup.merge(:argv => list.dup)
+  end
+end
+
+def read
+  JSON.parse((gets nil).split(/[\r\n]/).join(""))
+end
+
+def evaluate(path,data,options)
+  path.split('.').reduce(data) do |m,v|
+    if m.is_a? Array
+      m[v.to_i]
+    else
+      if options[:case_insensitive]
+        m[m.keys.find { |e| e.downcase == v.downcase}]
+      else
+        m[v]
+      end
+    end
+  end
+end
+
+def print(json)
+  puts begin
+    if json.is_a? String
+      json.inspect
+    elsif json.is_a? Numeric
+      json.to_s
+    elsif json.is_a? TrueClass
+      "true"
+    elsif json.is_a? FalseClass
+      "false"
+    elsif json.is_a? NilClass
+      "null"
+    else
+      JSON.generate json, {
+        :indent => "  ",
+        :space => " ",
+        :object_nl => "\n",
+        :array_nl => "\n"
+      }
+    end
+  end
+end
+
+options = options_for({}, ARGV)
+ARGV.clear.push(*options.delete(:argv))
+unless options[:no_eval]
+  print evaluate ARGV.shift, read, options
+else
+  print read
+end
