@@ -8,8 +8,7 @@ export LC_ALL="$LANG"
 export EDITOR=vim
 
 # paths
-export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$HOME/node/bin:$HOME/.gem/bin:$PATH"
-export GEM_HOME="$HOME/.gem"
+export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
 # prompt
