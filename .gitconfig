@@ -1,0 +1,11 @@
+[user]
+	email = jglynn@factset.com
+	name = John J. Glynn IV
+[core]
+	excludesfile = /home/jglynn/.gitignore_global
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
